@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .registration-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .registration-container h2 {
+            text-align: center;
+        }
+
+        .registration-container input[type="text"],
+        .registration-container input[type="password"],
+        .registration-container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .registration-container select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .registration-container input[type="submit"] {
+            width: 100%;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .registration-container input[type="submit"]:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Registration</h2>
+        <form action="your-server-script.php" method="post">
+            <select name="userType" required>
+                <option value="employee">Employee</option>
+                <option value="admin">Admin</option>
+            </select>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>
